@@ -1,0 +1,65 @@
+class A{
+ static void add(int a,int b){
+	 int c=(a+b);
+	 System.out.print("The Addition of"+a+  " and " +b+ "is::");
+  System.out.println(c);
+  }
+
+}
+//save::A.java
+
+
+class B{
+  static void sub(int a,int b){
+	 int c=(a-b);
+	  System.out.print("The Subtraction of"+a+  " and " +b+ "is::");
+	 System.out.println(c);
+  }
+ 
+}
+
+//save::B.java
+
+class C{
+  static void mul(int a,int b){
+	  int c=(a*b);
+	   System.out.print("The Multiplication of"+a+  " and " +b+ "is::");
+  System.out.println(c);
+  }
+}
+
+//save::C.java
+
+
+class D{
+  static void div(int a,int b){
+	  int c=(a/b);
+	   System.out.print("The Division of"+a+  " and " +b+ "is::");
+  System.out.println(c);
+  }
+ 
+}
+
+//save::D.java
+
+class Calci{
+    public static void main(String[] args){
+	A.add(10,20);
+	B.sub(10,20);
+	C.mul(10,20);
+	D.div(10,20);
+	}
+}
+
+
+
+>>>cmd>>javac Calci.java
+>>>java Calci
+
+E:\java_naresh_it\CORE JAVA\PROGRAMS\sample>javac Calci.java
+
+E:\java_naresh_it\CORE JAVA\PROGRAMS\sample>java Calci
+The Addition of10 and 20is::30
+The Subtraction of10 and 20is::-10
+The Multiplication of10 and 20is::200
+The Division of10 and 20is::0
