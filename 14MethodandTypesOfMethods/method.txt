@@ -1,0 +1,53 @@
+1) Need of this chapter?
+		- used for developing reusable logic tor perform one operation
+		- that operation can be a mathematical operation or
+		- can be be business operation
+		
+		- upto variables chapter we have learn storing data,
+		- now we must learn performing operations by using that data
+
+		- we will  perform muitiple operation 
+		- we must develop logic for each operation separately 
+		
+		- for this purpose we need new PE, that is method
+
+2) Why do we need create our own method, when we have main method already?
+		-We can place logic inside main method, but it is not reusable
+		- because
+			1. It name is fixed, its paramter is fixed, its return type is fixed, its modifiers fixed
+			2. we can not separate one operation to another operation logic
+
+		- In order to develop logic in reusable way by separating from other operations logic
+		- we must develop our own method, user defined method or custom method
+
+class  Addition{
+	public static void main(String[] args) {
+		int a = 10;
+		int b = 20;
+
+		//addition logic
+		int c = a + b;
+		System.out.println(c);
+
+		//sutraction logic
+		int d = a - b;
+		System.out.println(d);
+
+		//multiplication logic
+		int e = a * b;
+		System.out.println(e);
+	
+	}
+}
+public double witdraw(double amount)throws IllegalArgumentException{
+
+if(amount<o)throw new IllealArumentException("please enter valid amount"); 
+if(amount>balance)throw new IllealArumentException("insufficient balance"); 
+
+ amount=balance-amount;
+ return amount;
+    currentBalance(balance);
+ }
+ public void CurrentBalance(double balance){
+ System.out.println("Your current balance is::"+balance);
+ }
