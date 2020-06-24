@@ -1,4 +1,3 @@
-import java.util.*;
 class TestBank02{
 	 private double balance=20000;
 	 public static void main(String[] args){

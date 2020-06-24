@@ -27,6 +27,10 @@ class Customers02 extends Customers01{
 	 
 }
 class InvalidAmountException extends Exception{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	InvalidAmountException(){
 	}
 	InvalidAmountException(String s){
@@ -59,6 +63,7 @@ class Bank01{
 		  System.out.println("--Your balance is---"+d1);
 		  double d2=c1[i].withdraw(200.0);
 		  System.out.println("--Your Withdrawing amout is::"+d2);
+		  sc.close();
 		}
 	}
 }

@@ -24,7 +24,8 @@ from out side  of class We must use class name.var_name*/
  }
 }
 class VariableLS_AccessingRules{
- public static void main(String[] args){
+ @SuppressWarnings("unused")
+public static void main(String[] args){
  //System.out.println(a);
  /*When we want to access staic a variable 
 from out side  of class We must use class name.var_name*/
@@ -34,10 +35,10 @@ from out side  of class We must use class name.var_name*/
  /*Here variable x is get memory only when obj is created
  and non-static variale is access only through obj reference*/
  Example01 e1 = new Example01();
- System.out.println(e1.a);
+ System.out.println(Example01.a);
  System.out.println(e1.x);
  Example01 e2 = null; 
- System.out.println(e2.a);
+ System.out.println(Example01.a);
  //System.out.println(e2.x);  RE: NPE
  }
  static void m1(int p){

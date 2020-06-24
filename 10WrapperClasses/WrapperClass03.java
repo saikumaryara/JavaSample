@@ -16,7 +16,7 @@ class WrapperClass03
 		System.out.println(); 
 //AutoBoxing upto java 1.4v
 	//Storing
-		ArrayList al=new ArrayList();
+		ArrayList<Integer> al=new ArrayList<Integer>();
 		al.add(new Integer(2));//Here i am passing pv as an object
 		al.add(new Integer(3));
 		al.add(new Integer(4));//like N no.of ojects we can add it is growable

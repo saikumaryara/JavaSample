@@ -34,13 +34,7 @@ class TypePromotion{
 //	byte b3=b1+b2;// byte+byte=int CE or 
    int i2=b1+b2;
    System.out.println(i2);
-   byte b4=10+20;//the compiler will is consider value
-  // byte b5=10+120;//value is not in the range of byte
- //  byte b6=10L+20;//CE long > byte
-     byte b7=(int)10L+20;
-	 long l2=10L;
-	// byte b8=l2+20;//CE long + int =long
-	//byte b9=(int)l2+20;//CE possible lossy conversion 
-	int i3=(int)l2+20;// (int)l2 =int --> int +int=int
+   @SuppressWarnings("unused")
+long l2=10L;
    }
 }

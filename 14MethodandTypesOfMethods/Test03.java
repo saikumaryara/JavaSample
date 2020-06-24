@@ -23,7 +23,8 @@ class Example02{
 	s1.fee=sc.nextDouble();
 	//System.out.println(s1.sno+" "+s1.sname+" "+s1.course+" "+s1.fee);
 	System.out.println(s1);
-  }
+	sc.close();
+	}
   static Student02 m2(){
 	Student02 s2=new Student02();
 	Scanner sc=new Scanner(System.in);
@@ -37,7 +38,9 @@ class Example02{
 	s2.fee=sc.nextDouble();
 	//System.out.println(s2.sno+" "+s2.sname+" "+s2.course+" "+s2.fee);
 	System.out.println(s2);
+	sc.close();
 	return s2;
+	
   }
  
 }
@@ -52,5 +55,6 @@ public class Test03{
 	Student02 s3=Example02.m2();
 	System.out.println(s3);
 	//System.out.println(Example02.m2());
+	sc.close();
 	}
 }

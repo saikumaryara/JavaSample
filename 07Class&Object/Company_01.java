@@ -47,6 +47,7 @@ class Company_01
 	System.out.println("EMPLOYEE NAME  \t::"+e2.empname);
 	System.out.println("EMsPLOYEE salary::"+e2.salary);
 		System.out.println("EMPLOYEE dept\t::"+e2.dept);
+		sc.close();
 }
 }
 //Company_01.java

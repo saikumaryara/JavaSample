@@ -1,4 +1,3 @@
-import java.lang.*;
 class Person{
 	int pnum;
 	Person(int pnum){
