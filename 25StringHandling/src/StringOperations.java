@@ -3,7 +3,7 @@ class StringOperations
 	public static void main(String[] args) 
 	{
 		//comparing two strings
-/*
+
 		String s1 = new String("abc");
 		String s2 = new String("abc");
 		String s3 = new String("Abc");
@@ -38,93 +38,93 @@ class StringOperations
 
 		String s8 = new String("abc");
 		System.out.println(s8);//abc
-*/
+
 		//concatenating new string, 
 		//adding new string at end of old and placing the result in new object is called concatenation
 		//We can do it in two ways
 		//1. using + operator
 		//2. using concat() method
 		//public String concat(String newString) 
-/*
-		//concatenation using + operator
-		String s1 = new String("a");
-		String s2 = s1 + "b";
 
-		System.out.println(s1);//a
-		System.out.println(s2);//ab
-		System.out.println(s1 == s2); //false
+		//concatenation using + operator
+		String str1 = new String("a");
+		String str2 = str1 + "b";
+
+		System.out.println(str1);//a
+		System.out.println(str2);//ab
+		System.out.println(str1==str2); //false
 
 
 		//concatenation using concat() method
-			String s3 = new String("a");
-		String s4 = s1.concat("b");
+			String str3 = new String("a");
+		String str4 = str1.concat("b");
 
-		System.out.println(s3);//a
-		System.out.println(s4);//ab
-		System.out.println(s3 == s4); //false
+		System.out.println(str3);//a
+		System.out.println(str4);//ab
+		System.out.println(str3 == str4); //false
 	
 		//If we perform modification on string using String class methods, and if that object is changed as a result of that method call, new String object is created with that result. If we store that new object reference in reference variable, it is reachable else it is garbage collected. 
 		
 		//old string is modified => new string is created => its reference is not strored => s4 state is still ab only
-		s4.concat("c");
-		System.out.println(s4);//ab
+		str4.concat("c");
+		System.out.println(str4);//ab
 
 		// Due to a String method call if String object is not changed, then the current String object refernece is returned
 		
 		//What is the output from the below program?
-		String s5 = s4.concat("");
-		System.out.println(s4); // ab
-		System.out.println(s5); // ab
-		System.out.println(s4 == s5); //true
-*/
+		String str5 = str4.concat("");
+		System.out.println(str4); // ab
+		System.out.println(str5); // ab
+		System.out.println(str4 == str5); //true
+
 		//deleting trailing and leading spaces of a String
 		//public String trim()  => it will not remove middle spaces
 
-		String s1 = new String(" hari krishna "); 
-		String s2 = s1.trim(); 
+		String st1 = new String(" hari krishna "); 
+		String st2 = st1.trim(); 
 
-		System.out.println(s1); 
-		System.out.println(s2);
-		System.out.println(s1 == s2); 
+		System.out.println(st1); 
+		System.out.println(st2);
+		System.out.println(st1 == st2);//false length is diff 
 
-		System.out.println(s1.length()); 
-		System.out.println(s2.length());
+		System.out.println(st1.length()); //14
+		System.out.println(st2.length());//12
 
-		//What is the oupt from below program?
-		String s3 = new String("Naresh i Technologies"); 
-		String s4 = s3.trim(); 
+		//What is the output from below program?
+		String st3 = new String("Naresh i Technologies"); 
+		String st4 = st3.trim(); 
 
-		System.out.println(s3); 
-		System.out.println(s4); 
-		System.out.println(s3 == s4);
+		System.out.println(st3); 
+		System.out.println(st4); 
+		System.out.println(st3 == st4);//true
 
 		//finding length of the given string, we should use below method
 		//public int length()
-/*
-		String s1 = new String("Java Programming Language");
-		int size = s1.length();
-		System.out.println("lenth of s1 string: "+ size); 
+
+		String ss1 = new String("Java Programming Language");
+		int size = ss1.length();
+		System.out.println("lenth of ss1 string: "+ size); 
 		
 		//print character of the given index, string index starts from ZERO, because its internal object is char array, should use below method.
 
 		//public char chatAt(int index)
-		System.out.println("character at 10th index in s1 string: "+ s1.charAt(10)); 
+		System.out.println("character at 10th index in s1 string: "+ ss1.charAt(10)); 
 
 		//print all characters in given string with index, we should write our own logic with charAt() and length() methods
 		for (int i = 0; i < size ; i++ )
 		{
-			System.out.println("character at index "+ i + "is : "+ s1.charAt(i)); 
+			System.out.println("character at index "+ i + "is : "+ ss1.charAt(i)); 
 		}
-	*/	
+
 		//Note: If we pass index out of range (index < 0 || index >= string.length()) to charAt() method it leads StringIndexOutOfBoundsException
 
 		//In the above for loop if we keep condition i <= size, after printing all 25 characters JVM throws SIOBE for 25th index.
-/*
-		System.out.println(s1.charAt(0)); //=> J
-		System.out.println(s1.charAt(10)); //=> a
-		//System.out.println(s1.charAt(-10)); //=> SIOBE
-		//System.out.println(s1.charAt(26)); //=> SIOBE
-*/
+
+		System.out.println(st1.charAt(0)); //=> J
+		System.out.println(st1.charAt(10)); //=> a
+		//System.out.println(st1.charAt(-10)); //=> SIOBE
+		//System.out.println(st1.charAt(26)); //=> SIOBE
+
 
 		//Finding index of given character of String in the passed string, use below methods
 
@@ -143,19 +143,19 @@ class StringOperations
 		//below methods return first occurence of given character or String from the "end to begin" from the given index 
 			//public int lastIndexOf(char ch, int fromIndex)
 			//public int lastIndexOf(String str, int fromIndex)
-/*
-		String s1 = new String("Java Programming Language");
-		System.out.println(s1.indexOf('a')); //=> 1
-		System.out.println(s1.lastIndexOf('a')); //=> 22
-		System.out.println(s1.indexOf('a', 4)); //=> 10
-		System.out.println(s1.lastIndexOf('a', 22)); //=> 22
-		System.out.println(s1.lastIndexOf('a', 21)); //=> 18
 
-		System.out.println(s1.indexOf("Programming")); //=> 1
+		String str = new String("Java Programming Language");
+		System.out.println(str.indexOf('a')); //=> 1
+		System.out.println(str.lastIndexOf('a')); //=> 22
+		System.out.println(str.indexOf('a', 4)); //=> 10
+		System.out.println(str.lastIndexOf('a', 22)); //=> 22
+		System.out.println(str.lastIndexOf('a', 21)); //=> 18
+
+		System.out.println(str.indexOf("Programming")); //=> 1
 		
 		//the given char or string is not avialable in the current string, above methods return -1.
-		System.out.println(s1.indexOf("hari")); //=> -1
-		System.out.println(s1.indexOf('k')); //=> -1
+		System.out.println(str.indexOf("hari")); //=> -1
+		System.out.println(str.indexOf('k')); //=> -1
 
 	
 		//write a program to find the given string or char available or not
@@ -169,54 +169,54 @@ class StringOperations
 
 		findWithIndexOf("asdfasdfsadf hari krishna asdfasdfsadf");
 		findWithContains("asdfasdfsadf hari krishna asdfasdfsadf");
-*/
+
 		//replacing a character with new character, use methods of String class 
 			//public String replace(char oldChar, char newChar)
 			//public String replace(CharSequence oldString, CharSequence newString)
-/*		String s1 = new String("Java Programming Language");
-		String s2 = s1.replace('J', 'K');
+	String sr1 = new String("Java Programming Language");
+		String sr2 = sr1.replace('J', 'K');
 
-		System.out.println("s1 String: "+s1);
-		System.out.println("s2 String: "+s2);
+		System.out.println("sr1 String: "+sr1);
+		System.out.println("sr2 String: "+sr2);
 
-		String s3 = s1.replace('a', 'A');
-		System.out.println("s3 String: "+s3);
+		String sr3 = sr1.replace('a', 'A');
+		System.out.println("sr3 String: "+sr3);
 		
-		String s4 = s1.replace("Programming", "Object-Oriented Programming");
-		System.out.println("s4 String: "+s4);
+		String sr4 = sr1.replace("Programming", "Object-Oriented Programming");
+		System.out.println("sr4 String: "+sr4);
 
-		String s5 = "Ha Ha Ha";
-		String s6 = s5.replace("Ha", "Hello");
-		System.out.println("s5 String: "+s5);
-		System.out.println("s6 String: "+s6);
+		String sr5 = "Ha Ha Ha";
+		String sr6 = sr5.replace("Ha", "Hello");
+		System.out.println("sr5 String: "+sr5);
+		System.out.println("sr6 String: "+sr6);
 
-		String s7 = s6.replace("hello", "Hi");
-		System.out.println("s7 String: "+s7);
+		String sr7 = sr6.replace("hello", "Hi");
+		System.out.println("sr7 String: "+sr7);
 
 		//due to replace method call no change in current string, hence JVM returns same current string object reference.
-		System.out.println(s6 == s7);//true
-	*/	
+		System.out.println(sr6 == sr7);//true
+
 		//converting all characters in string to upper or lower case
 			//public String toUpperCase()
 			//public String toLowerCase()
-/*
-		String s1 = "Hari Krishna";
-		System.out.println(s1.toUpperCase()); //HARI KRISHNA
-		System.out.println(s1.toLowerCase()); //hari krishna 
-		System.out.println(s1); //Hari Krishna
 
-		String s1 = "hari";
-		String s2 = s1.toLowerCase();
-		String s3 = s1.toUpperCase();
-		System.out.println(s1); //hari
-		System.out.println(s2); //hari
-		System.out.println(s3); //HARI
-		System.out.println(s1 == s2); //true
+		String s1s = "Hari Krishna";
+		System.out.println(s1s.toUpperCase()); //HARI KRISHNA
+		System.out.println(s1s.toLowerCase()); //hari krishna 
+		System.out.println(s1s); //Hari Krishna
+
+		String s1r = "hari";
+		String s2r = s1r.toLowerCase();
+		String s3r = s1r.toUpperCase();
+		System.out.println(s1r); //hari
+		System.out.println(s2r); //hari
+		System.out.println(s3r); //HARI
+		System.out.println(s1r == s2r); //true
 		System.out.println(s1 == s3); //false
-*/		
+		
 		//startsWith() / endsWith()
 		String s = "Java Programming Language";
-/*
+
 
 		System.out.println(s.startsWith("Java"));
 		System.out.println(s.startsWith("java"));
@@ -224,44 +224,45 @@ class StringOperations
 
 		System.out.println(s.endsWith("hari"));
 		System.out.println(s.endsWith("Language"));
-	*/	
+	
 		//isEmpty()
-/*
+
 		System.out.println(s.isEmpty());
 
-		String s1 = "";
-		String s2 = " ";
-		String s3 = new String("");
-		System.out.println(s1.isEmpty());
-		System.out.println(s2.isEmpty());
-		System.out.println(s2.length());
-		System.out.println(s3.length());
-		System.out.println(s3.isEmpty());
-*/
+		String s1t = "";
+		String s2t = " ";
+		String s3t = new String("");
+		System.out.println(s1t.isEmpty());
+		System.out.println(s2t.isEmpty());
+		System.out.println(s1t.length());
+		System.out.println(s2t.length());
+		System.out.println(s3t.length());
+		System.out.println(s3t.isEmpty());
+
 		//substring()
-/*
+
 		System.out.println(s.substring(5,16));
 		System.out.println(s.substring(s.indexOf("P"),s.indexOf(" L")));
 		System.out.println(s.substring(s.indexOf("Language")));
 	//	System.out.println(s.substring(16,5));
 	//	System.out.println(s.substring(-1,5));
-*/
+
 		//split()
-	/*
+	
 		String[] sarray = s.split(" ");
-		int size	= sarray.length;
-		for (int i = 0; i < size ; i++ )
+		int size1	= sarray.length;
+		for (int i = 0; i < size1 ; i++ )
 		{
 			System.out.println(i + " tocken is "+ sarray[i]);
 		}
-		*/
-/*
+		
+
 		System.out.println("" + 10 + 20);
 		System.out.println("" + "10" + 20);
 		System.out.println("10" + 20);
 		System.out.println("10" + "20");
 		System.out.println("1020");
-*/
+
 
 	}
 
@@ -289,6 +290,4 @@ class StringOperations
 		}
 	}
 }
-class Example
-{
-};
+

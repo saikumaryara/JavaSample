@@ -19,9 +19,9 @@ public class Test06_String_StringBuff_StringBuid_Relation {
 	m1(s2);
 	m1(s3);
 	}  
- //void m1(String s) { }
-    //void m1(StringBuffer s) {}
-//void m1(StringBuilder s) {}
+ //void m1(String s) { } //it allows only string type
+    //void m1(StringBuffer s) {}//it allows only stringBuffer type
+//void m1(StringBuilder s) {}///it allows only StringBuilder type
 	
 static void m1(CharSequence cs) {//U can pass any type of String
 	System.out.println(cs);
