@@ -14,10 +14,10 @@ class EscapeSequence{
 			//System.out.println("\");
 			 System.out.println("'a'\t is a letter");
 System.out.println("\"Hari\"\t is a word");
-System.out.println(" GOODEVINING");
-System.out.println(" GOOD\fEVINING");
-System.out.println(" GOOD\bEVINING");
-System.out.println(" GOOD\rEVINING");
+System.out.println(" GOODEVENING");
+System.out.println(" GOOD\fEVENING");
+System.out.println(" GOOD\bEVENING");
+System.out.println(" GOOD\rEVENING");
 
 	}
 }
