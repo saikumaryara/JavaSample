@@ -33,5 +33,9 @@ class Test3
 		A1 a1=new B1();
 		a1.m2();
 		a1.m1();
+		System.out.println();
+		A1 a2=new A1();
+		a2.m2();
+		a2.m1();
 	}
 }

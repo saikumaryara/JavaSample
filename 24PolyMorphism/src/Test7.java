@@ -28,7 +28,7 @@ class B5 extends A5{
 	}
 	void m4() {
 		super.a=a-10;
-		super.x=x=10;
+		super.x=x-10;
 	}
 }
 

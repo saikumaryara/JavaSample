@@ -1,0 +1,316 @@
+2
+
+
+1
+I'm making a bank program in java and have 5 classes: Account, SavingsAccount (inherits Account), CreditAccount (inherits Account), Bank, Customer.
+
+The program is working as it is, but I can't figure out how to make a customer have two or more accounts. Lets say that one customer wants both a credit account AND a savings account, or maybe two savings accounts.
+
+Can anyone give me some suggestions? Thank you
+
+Bank class:
+
+public class Bank {
+    String bankName;
+    private Customer[] customers = new Customer[100];
+
+    Bank(String bankName) {
+        this.bankName = bankName;
+    }
+
+    public Customer[] getCustomer() {
+        return customers;
+    }  
+
+   public String getBankname() {
+       return bankName;
+   }
+}
+Account class:
+
+public abstract class Account {
+    protected double balance = 0;
+    protected String accountId;
+
+   public Account() {}  //Defaultkonstruktor
+
+   public Account(double bal, String id) {   //Konstruktor
+       if (balance >= 0) {
+           balance = bal;
+       }
+       else {
+           balance = 0;
+       }
+       accountId = id;
+   }
+
+   public abstract void deposit(double amount); 
+
+   public abstract void withdraw(double amount);
+
+   public abstract double getBalance();
+
+   public abstract String getAccountId();
+
+   public abstract void transfer(double amount, Account account);
+}
+SavingsAccount class: (CreditAccount class is similar)
+
+public class SavingsAccount extends Account{ 
+    private double interest = 2.9;
+
+    public SavingsAccount() {      //Konstruktor
+        super();
+    }
+
+    public SavingsAccount(double balance, String id) {   //Konstruktor
+        super(bal,id);
+    }
+
+    public void setInterest(Customer customer) {
+      //code
+    }
+
+    public void setBalance(double balance) {
+       //code
+    }
+
+    @Override
+    public void deposit(double amount) {
+       //code
+    }
+
+    @Override
+    public void withdraw(double amount) {
+       //code
+    }
+
+    @Override
+    public double getBalance(){
+       //code
+    }
+
+    @Override
+    public String getAccountId(){
+       //code
+    }
+
+    @Override
+    public void transfer(double amount, Account account) {
+       //code
+    }
+
+    public void setInterest(double interest){
+       //code
+    }
+
+    public double getInterest(){
+      //code
+    }
+}
+Customer class:
+
+public class Customer {
+    private String firstName;
+    private String lastName;
+    private String number;
+
+    private SavingsAccount account = new SavingsAccount();
+    private CreditAccount cAccount = new CreditAccount();
+
+    Customer(String firstName, String lastName, String number, SavingsAccount account) {   
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.number = number;
+        this.account = account;
+     }
+
+    Customer(String firstName, String lastName, String number, CreditAccount cAccount) {   
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.number = number;
+        this.cAccount = cAccount;
+    }
+
+    public SavingsAccount getAccount() {
+        return account;
+    }
+
+    public CreditAccount getCreditAccount() {
+        return cAccount;
+    }            
+}
+Main:
+
+public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int choice;
+    int numberOfCustomers = 0;
+    boolean endProgram = false;
+    String bankName;   
+    System.out.print("Name of bank: ");
+    bankName = input.next();
+    Bank bank = new Bank(bankName);
+    String accountId;
+
+    SavingsAccount acc = new SavingsAccount();  
+    Customer[] customer = bank.getCustomer();            
+
+    do {        
+        System.out.println("    " + bank.getBankname() + "\n");
+        System.out.println("    1. See balance                          ");
+        System.out.println("    2. Withdraw                             ");
+        System.out.println("    3. Deposit                              ");
+        System.out.println("    4. Transfer                             ");
+        System.out.println("    5. Add interest                         ");
+        System.out.println("    6. Add new customer                     ");
+        System.out.println("    7. Show customers                       ");
+        System.out.println("    8. Change interest                      ");
+        System.out.println("    0. Exit                                 ");            
+
+        choice = input.nextInt();
+
+        switch(choice) {
+
+            case 1:  
+                //code                        
+                break;
+
+
+            case 2: 
+                //code
+                break;
+
+
+            case 3: 
+                //code
+                break;
+
+
+            case 4: 
+                //code
+                break;                   
+
+
+            case 5: 
+                //code
+                break;
+
+
+            case 6: //Add customer                   
+                System.out.println("Choose account: ");
+                System.out.println("1. Savings account");
+                System.out.println("2. Credit account");
+                choice = input.nextInt();
+                switch(choice) {
+
+                    case 1:     //Create savings account
+                        System.out.print("Enter amount to deposit: ");
+                        double amount = input.nextDouble();
+                        System.out.println("Account number is: " + numberOfCustomers);
+                        SavingsAccount savingsAccount = new SavingsAccount(amount, String.valueOf(numberOfCustomers));                    
+                        System.out.print("First name: ");
+                        String firstName = input.next();
+                        System.out.print("Last name: ");
+                        String lastName = input.next();
+                        System.out.print("Customer number: ");
+                        String pnumber = input.next();
+
+                        Customer newCustomer = new Customer(firstName, lastName, pnumber, savingsAccount);
+                        customer[numberOfCustomers] = newCustomer;
+                        numberOfCustomers++;              
+
+                        break;
+
+                    case 2:     //Create credit account
+                        System.out.print("Enter amount to deposit: ");
+                        double amount = input.nextDouble();
+                        System.out.println("Account number is: " + numberOfCustomers);
+                        CreditAccount creditAccount = new CreditAccount(amount, String.valueOf(numberOfCustomers));                    
+                        System.out.print("First name: ");
+                        String firstName = input.next();
+                        System.out.print("Last name: ");
+                        String lastName = input.next();
+                        System.out.print("Customer number: ");
+                        String pnumber = input.next();
+
+                        Customer newCustomer = new Customer(firstName, lastName, pnumber, creditAccount);
+                        customer[numberOfCustomers] = newCustomer;
+                        numberOfCustomers++;                    
+
+                        break;                            
+                }
+                break;
+
+
+            case 7: 
+                //code
+                break;
+
+
+            case 8: 
+                //code                    
+                break;  
+
+
+            case 0: 
+                //code
+                break;
+        }
+    } while (!endProgram);
+}
+java
+share  improve this question  follow 
+asked Sep 20 '14 at 18:35
+
+user2939293
+68344 gold badges1515 silver badges3737 bronze badges
+1
+In the Customer class, use a List<Account> instead of individual fields. – Dave Morrissey Sep 20 '14 at 18:37
+1
+Give Customer a collection of Accounts such as an ArrayList<Account> with which it can hold multiple Account objects. Note, @DaveMorrissey gives the better response, to make the accountList variable of type List<Account> since it is almost always best to "code to the interface" rather than the concrete class, but that's the subject of another discussion. – Hovercraft Full Of Eels Sep 20 '14 at 18:38 
+add a comment
+2 Answers
+Active
+Oldest
+Votes
+
+6
+
+First off rename Account to AbstractAccount and create an Account interface, your Credit and Saving accounts are concrete implementations. Then in your Customer class declare a variable accounts which is a List accounts. Something like
+
+public class Customer {
+    private String firstName;
+    private String lastName;
+    private String number;
+
+    private List<Account> accounts;
+Your Account interface might look like
+
+interface Account {
+
+    public void deposit(double amount); 
+
+    public void withdraw(double amount);
+
+    public double getBalance();
+
+    public String getAccountId();
+}
+Your existing class gets refactored
+
+ public abstract AbstractAccount implements Account {
+     ....
+ }
+Your SavingAccount becomes
+
+ public SavingAccount extends AbstractAccount {
+  ....
+ }
+I'd be a little worried that this method is declared as abstract on the Account class. Why would a transfer be implemented differently on two different classes?
+
+ public abstract void transfer(double amount, Account account);
+I suggest this method would be belong more to an AccountManager class which would ensure the correct amount is credited/debited from two accounts.
+
+ public void transfer(double amount, Account fromAccount, Account toAccount);
+This class could then check that the 'fromAccount' has the required funds available to transfer as a validation step before the actual transfer happens.

@@ -39,6 +39,11 @@ public class Test4 {
    d1.m1();
    d1.m2();
    d1.m3();
+   System.out.println();
+   C2 d2=new D2();
+   d2.m1();
+   d2.m2();
+   d2.m3();
 
  }
 }
