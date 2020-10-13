@@ -41,7 +41,8 @@ public class Test2 {
 	    P p2=new Q();
 	    p2.m1();//compiler add P.m1();
 	    p2.m2();//Here we are calling NSM of class P but it holds Q class obj 
-	    //so it exe from Q class if 
+	    //so it exe from Q class and we are overriding m2() if not override exec from p class here
+      //new Q() internally aving P obj
 	    p2.m3();
 	    //p2.m4();
 	   // Q q2=new P();U can't store sub class obj in super class reference
