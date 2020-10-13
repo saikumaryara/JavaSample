@@ -30,7 +30,8 @@ class Test3
 	    b1.m2();
 	    b1.m1();
 		System.out.println("");
-		A1 a1=new B1();
+		A1 a1=new B1();//here new B() create obj internally for A class also
+		//because in B class extends A constructor call super() internaly
 		a1.m2();
 		a1.m1();
 		System.out.println();
