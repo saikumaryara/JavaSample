@@ -3,7 +3,7 @@ class A{
 		System.out.println("A.m1()");
 	}
 	void m2(int a) {
-		System.out.println("Int A.m1()");
+		System.out.println("Int A.m2()");
 	}
 }
 class B extends A{
