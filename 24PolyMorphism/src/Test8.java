@@ -24,5 +24,6 @@ public class Test8 {
     	    	System.out.println(q1.b);
     	    }*/
     	    //Q1 q1=b1.m1();
+    	    System.out.println("streling:"+10+20*5);
       }
 }
