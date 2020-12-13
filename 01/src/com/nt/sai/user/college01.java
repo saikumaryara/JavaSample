@@ -24,7 +24,7 @@ public class college01 {
 			s2.setSno(sc.nextInt());
 			System.out.println("Enter Course::");
 			s2.setCourse(sc.next());
-		if (s1.hashCode() == s2.hashCode()) {//it search by thier state
+		if (s1.hashCode() == s2.hashCode()) {//it search by their state
 			System.out.println("Both students s1 and s2 same group::");
 		} else
 			System.out.println("Both students s1 and s2 not same group::");

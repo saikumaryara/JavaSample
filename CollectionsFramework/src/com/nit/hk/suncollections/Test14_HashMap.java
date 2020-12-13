@@ -2,6 +2,7 @@ package com.nit.hk.suncollections;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -9,8 +10,9 @@ public class Test14_HashMap {
 
 	public static void main(String[] args) {
 
+		
 		HashMap<Object, Object> hm = new HashMap<Object, Object>();
-//#1 counting
+//#1 countings
 		System.out.println(hm.isEmpty());
 		System.out.println(hm.size());
 //#2 printing
@@ -20,6 +22,7 @@ public class Test14_HashMap {
 		System.out.println(hm.put("a", 1));
 		System.out.println(hm.put(6, 2));
 		System.out.println(hm.put("c", 3));
+		System.out.println(hm);
 		System.out.println(hm.put(5, 4));
 		System.out.println(hm.put("b", 5));
 		System.out.println(hm.put(true, 5));
@@ -27,12 +30,12 @@ public class Test14_HashMap {
 		System.out.println(hm.put(new A(5, 6), 8));
 		System.out.println(hm.put(new A(7, 8), 9));
 		System.out.println(hm.put(new A(10, 20), 10));
-
+          HashSet h1=new HashSet();
 		System.out.println(hm.size());
 		System.out.println(hm);
 		System.out.println();
 
-		System.out.println(hm.put("a", 01));
+		System.out.println(hm.put("a", 7));
 		System.out.println(hm.put(5, 02));
 		System.out.println(hm.put(new A(5, 6), "03"));
 		A a5 = new A(1, 2);

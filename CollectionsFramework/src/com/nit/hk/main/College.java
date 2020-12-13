@@ -13,6 +13,7 @@ import com.nit.hk.helper.CourseMap;
 
 public class College {
 	public static void main(String[] args) throws StudentNotFoundException {
+		@SuppressWarnings("resource")
 		Scanner scn = new Scanner(System.in);
 		StudentDAO studentDAO = new StudentDAO();
 		loop: while (true) {

@@ -1,6 +1,6 @@
 package com.nit.hk.suncollections;
 
-public class A {
+public class A implements Comparable<A>{
 	private int x;
 	private int y;
 
@@ -24,10 +24,10 @@ public class A {
 	public void setY(int y) {
 		this.y = y;
 	}
-	@Override
-	public int hashCode() {
-		return x+y;
-	}
+
+	/*
+	 * @Override public int hashCode() { return x+y; }
+	 */
 	@Override
 	public  boolean equals(Object obj) {
 		if(obj instanceof A) {
@@ -39,5 +39,10 @@ public class A {
 	@Override
 	public String toString() {
 		return "A(" + x + " , "+ y +")";
+	}
+
+	@Override
+	public int compareTo(A a) {
+		return a.x-this.x;
 	}
 }

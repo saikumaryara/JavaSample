@@ -34,7 +34,7 @@ public class Test_TreeSet {
 		System.out.println(tr3);
 		System.out.println();
 
-		TreeSet<Integer> tr4 = new TreeSet<Integer>((i1, i2) -> i2.compareTo(i1));
+		TreeSet<Integer> tr4 = new TreeSet<Integer>((i1, i2) -> i1.compareTo(i2));
 		tr4.add(5);
 		tr4.add(6);
 		tr4.add(7);
