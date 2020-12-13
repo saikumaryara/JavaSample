@@ -1,8 +1,13 @@
 package com.nit.hk.suncollections;
 
 
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.TreeMap;
+import java.util.TreeSet;
+import java.util.Comparator;
+
 
 /**
  * Emp2 class
@@ -82,8 +87,8 @@ import java.util.HashSet;
  */
 class Emp2 {
 
-	private int sno;
-	private String name;
+	 int sno;
+	 String name;
 
 	@Override
 	public int hashCode() {
@@ -184,8 +189,14 @@ public class AddingCustomObjectsMap1 {
 		hm1.put(e4, "C");
 		hm1.put(e5, "D");
 		System.out.println(hm1);
-
-		
+		TreeMap<Integer,Emp2> tm3=new TreeMap<Integer, Emp2>((s1,s2)->s1.compareTo(s2));
+		tm3.put(2,e1);
+		tm3.put(1,e2);
+		tm3.put(2,e3);
+		tm3.put(4,e4);
+		tm3.put(5,e5);
+		System.out.println(tm3);
 	}
 
 }
+
