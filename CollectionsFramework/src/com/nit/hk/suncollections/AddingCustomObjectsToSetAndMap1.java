@@ -74,7 +74,7 @@ public class AddingCustomObjectsToSetAndMap1 {
 		Emp e2=new Emp(2,"A");
 		Emp e3=new Emp();
 		Emp e4=new Emp(1,"S");
-		Emp e5=new Emp(2,"B");
+		Emp e5=new Emp(2,"A");
 		
 		
 		
@@ -121,7 +121,9 @@ public class AddingCustomObjectsToSetAndMap1 {
 		t3.add(e3);
 		t3.add(e4);
 		t3.add(e5);
-		
+		//Here state wise duplicate data not stored bacuase we are overrideing hs() ,equlas()
+		//If name and sno are same of next elmenent we are adding then i returend hashcode based on sno  same for both elements . 
+		//tat wy next e,e5 are not added
 		System.out.println(t3);
 		
 		
