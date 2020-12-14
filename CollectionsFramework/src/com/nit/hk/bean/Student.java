@@ -25,7 +25,7 @@ public class Student implements Serializable{
 	  *  
 	  */
 	 static {
-	 try (FileReader reader = new FileReader("institutedetails.properties")){
+	 try (FileReader reader = new FileReader("src/com/nit/hk/bean/institutedetails.properties")){
 	 Properties instituteProps  = new Properties();
 	 instituteProps.load(reader);
 	 institute = instituteProps.getProperty("name", "NiT");
@@ -102,8 +102,7 @@ public class Student implements Serializable{
 	 @Override
 	 public boolean equals(Object obj) {
 	 if(obj instanceof Student s) { //Java 14v new feature Pattern Matching
-	 return this.course.equalsIgnoreCase(s.course)
-	 && this.sno == s.sno;
+	 return this.course.equalsIgnoreCase(s.course)&& this.sno == s.sno;
 	 }
 	 return false;
 	 }
