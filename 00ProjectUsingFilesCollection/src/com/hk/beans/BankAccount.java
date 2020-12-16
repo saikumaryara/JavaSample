@@ -133,24 +133,18 @@ public class BankAccount implements Comparable<BankAccount>, Serializable {
 
 	@Override
 	public boolean equals(Object obj) {
-		/*
-		 * if (this == obj) return true; if (obj == null) return false; if (getClass()
-		 * != obj.getClass()) return false; BankAccount other = (BankAccount) obj; if
-		 * (accHName == null) { if (other.accHName != null) return false; } else if
-		 * (!accHName.equals(other.accHName)) return false; if (accNo != other.accNo)
-		 * return false; if (accType == null) { if (other.accType != null) return false;
-		 * } else if (!accType.equals(other.accType)) return false; if
-		 * (Double.doubleToLongBits(balance) != Double.doubleToLongBits(other.balance))
-		 * return false; if (password == null) { if (other.password != null) return
-		 * false; } else if (!password.equals(other.password)) return false; if
-		 * (useraname == null) { if (other.useraname != null) return false; } else if
-		 * (!useraname.equals(other.useraname)) return false; return true;
-		 */
+
+		if (this == obj)
+			return true;// same hashcode() is return
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
 		if (obj instanceof BankAccount) {
 
 			BankAccount acc = (BankAccount) obj;
 
-			return this.accType.equals(acc.accType) && this.accNo == acc.accNo;
+			return this.accType.equalsIgnoreCase(acc.accType) && this.accNo == acc.accNo;
 		}
 		return false;
 	}
