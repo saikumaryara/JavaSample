@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Test02_ArrayList {
 
 	public static void main(String[] args) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-         ArrayList<Object> al1=new ArrayList<>();
+         ArrayList<Object> al1=new ArrayList<>(5);
       //   System.out.println("a1 capacity :"+al1.capacity());
          Class cls=al1.getClass();
          Field elementDataField=cls.getDeclaredField("elementData");

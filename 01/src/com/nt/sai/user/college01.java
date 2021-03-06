@@ -6,13 +6,14 @@ import com.nt.sai.developer.student01;
 
 public class college01 {
 
-	public static void main(String[] args) {
+	 static void main(String[] args) {
 		/*
 		 * student01 s1 = new student01(101, "CJ"); student01 s2 = new student01(102,
 		 * "ADJ");
 		 */
 		student01 s1 = new student01();
 		student01 s2 = new student01();
+		
 		Scanner sc=new Scanner(System.in);
 			System.out.println("Enter s1 atudent details");
 			System.out.println("Enter sno::");

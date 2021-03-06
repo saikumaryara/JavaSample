@@ -1,0 +1,24 @@
+added objects count= 3
+
+[make=Volvo, model=S80, modelyear=2008, range=90.0, fuelCap=9, distance=0.0, kpl=10.0, licence=VBG984]
+[make=BMW, model=M8, modelyear=2019, range=108.0, fuelCap=9, distance=0.0, kpl=12.0, licence=VBG985]
+[make=Ferrari, model=Roma, modelyear=2020, range=135.0, fuelCap=9, distance=0.0, kpl=15.0, licence=VBG986]
+--------objects are added---------
+get object [make=BMW, model=M8, modelyear=2019, range=108.0, fuelCap=9, distance=0.0, kpl=12.0, licence=VBG985]
+removed object[make=Ferrari, model=Roma, modelyear=2020, range=135.0, fuelCap=9, distance=0.0, kpl=15.0, licence=VBG986]
+based on licence plate::[make=Volvo, model=S80, modelyear=2008, range=90.0, fuelCap=9, distance=0.0, kpl=10.0, licence=VBG984]
+
+Brand 		Model 		ModelYear 	Range 	licence height 	width 	length 	 area
+-------		-------		---------	------	------	-------	------	------	------
+Volvo		S80		 2008		90.0	VBG984	10	20	40	8000
+BMW		M8		 2019		108.0	VBG985	10	20	40	8000
+Ferrari		Roma		 2020		135.0	VBG986	10	20	40	8000
+
+data saved to file to file1.txt
+
+Data retrieved from file
+[[make=Volvo, model=S80, modelyear=2008, range=90.0, fuelCap=9, distance=0.0, kpl=10.0, licence=VBG984],
+ [make=BMW, model=M8, modelyear=2019, range=108.0, fuelCap=9, distance=0.0, kpl=12.0, licence=VBG985],
+ [make=Ferrari, model=Roma, modelyear=2020, range=135.0, fuelCap=9, distance=0.0, kpl=15.0, licence=VBG986]
+]
+
