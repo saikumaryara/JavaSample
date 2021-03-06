@@ -1,30 +1,10 @@
-Mar 05, 2021 10:39:55 AM edu.neu.csye6200.agency.VehicleRegistry addList
+Mar 06, 2021 8:19:10 PM edu.neu.csye6200.agency.VehicleRegistry addList
 INFO: called addList() method
-Mar 05, 2021 10:39:55 AM edu.neu.csye6200.agency.VehicleRegistry removeList
+Mar 06, 2021 8:19:10 PM edu.neu.csye6200.agency.VehicleRegistry removeList
 INFO: called removeList() method
-Mar 05, 2021 10:39:55 AM edu.neu.csye6200.agency.RentalAgencyIO save
+Mar 06, 2021 8:19:10 PM edu.neu.csye6200.agency.RentalAgencyIO save
 INFO: called first save() method
-Mar 05, 2021 10:39:55 AM edu.neu.csye6200.agency.RentalAgencyIO save
+Mar 06, 2021 8:19:10 PM edu.neu.csye6200.agency.RentalAgencyIO save
 INFO: called second save() method
-Mar 05, 2021 10:39:55 AM edu.neu.csye6200.agency.RentalAgencyIO load
-INFO: called load() method
-Mar 06, 2021 7:49:21 PM edu.neu.csye6200.agency.VehicleRegistry addList
-INFO: called addList() method
-Mar 06, 2021 7:49:21 PM edu.neu.csye6200.agency.VehicleRegistry removeList
-INFO: called removeList() method
-Mar 06, 2021 7:49:22 PM edu.neu.csye6200.agency.RentalAgencyIO save
-INFO: called first save() method
-Mar 06, 2021 7:49:22 PM edu.neu.csye6200.agency.RentalAgencyIO save
-INFO: called second save() method
-Mar 06, 2021 7:49:22 PM edu.neu.csye6200.agency.RentalAgencyIO load
-INFO: called load() method
-Mar 06, 2021 7:50:25 PM edu.neu.csye6200.agency.VehicleRegistry addList
-INFO: called addList() method
-Mar 06, 2021 7:50:25 PM edu.neu.csye6200.agency.VehicleRegistry removeList
-INFO: called removeList() method
-Mar 06, 2021 7:50:25 PM edu.neu.csye6200.agency.RentalAgencyIO save
-INFO: called first save() method
-Mar 06, 2021 7:50:25 PM edu.neu.csye6200.agency.RentalAgencyIO save
-INFO: called second save() method
-Mar 06, 2021 7:50:25 PM edu.neu.csye6200.agency.RentalAgencyIO load
+Mar 06, 2021 8:19:10 PM edu.neu.csye6200.agency.RentalAgencyIO load
 INFO: called load() method

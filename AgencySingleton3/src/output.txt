@@ -1,0 +1,72 @@
+Mar 06, 2021 8:19:10 PM edu.neu.csye6200.agency.VehicleRegistry addList
+INFO: called addList() method
+Before Sorting objects 
+
+[make=Volvo, model=S80, modelyear=2008, range=0.0, fuelCap=9, distance=0.0, kpl=10.0, licence=VBG980]
+
+[make=BMW, model=M8, modelyear=2019, range=0.0, fuelCap=9, distance=0.0, kpl=12.0, licence=VBG981]
+
+[make=Ferrari, model=Roma, modelyear=2020, range=0.0, fuelCap=9, distance=0.0, kpl=15.0, licence=VBG982]
+
+[make=Toyota, model=Fartunar, modelyear=2015, range=0.0, fuelCap=9, distance=0.0, kpl=10.0, licence=VBG983]
+
+[make=Toyota, model=Innova, modelyear=2012, range=0.0, fuelCap=9, distance=0.0, kpl=12.0, licence=VBG984]
+
+[make=Scoda, model=Rapid TSI, modelyear=2016, range=0.0, fuelCap=9, distance=0.0, kpl=15.0, licence=VBG989]
+
+[make=Volvo, model=S90, modelyear=2008, range=0.0, fuelCap=9, distance=0.0, kpl=10.0, licence=VBG988]
+
+[make=BMW, model=M6, modelyear=2019, range=0.0, fuelCap=9, distance=0.0, kpl=12.0, licence=VBG987]
+
+[make=Hyundai, model=Creta, modelyear=2020, range=0.0, fuelCap=9, distance=0.0, kpl=15.0, licence=VBG986]
+
+[make=Hyundai, model=Verna, modelyear=2008, range=0.0, fuelCap=9, distance=0.0, kpl=10.0, licence=VBG985]
+
+
+--------objects are added---------10
+
+after sorting objects based on licence plate using quicksort 
+
+[make=Volvo, model=S80, modelyear=2008, range=0.0, fuelCap=9, distance=0.0, kpl=10.0, licence=VBG980]
+
+[make=BMW, model=M8, modelyear=2019, range=0.0, fuelCap=9, distance=0.0, kpl=12.0, licence=VBG981]
+
+[make=Ferrari, model=Roma, modelyear=2020, range=0.0, fuelCap=9, distance=0.0, kpl=15.0, licence=VBG982]
+
+[make=Toyota, model=Fartunar, modelyear=2015, range=0.0, fuelCap=9, distance=0.0, kpl=10.0, licence=VBG983]
+
+[make=Toyota, model=Innova, modelyear=2012, range=0.0, fuelCap=9, distance=0.0, kpl=12.0, licence=VBG984]
+
+[make=Hyundai, model=Verna, modelyear=2008, range=0.0, fuelCap=9, distance=0.0, kpl=10.0, licence=VBG985]
+
+[make=Hyundai, model=Creta, modelyear=2020, range=0.0, fuelCap=9, distance=0.0, kpl=15.0, licence=VBG986]
+
+[make=BMW, model=M6, modelyear=2019, range=0.0, fuelCap=9, distance=0.0, kpl=12.0, licence=VBG987]
+
+[make=Volvo, model=S90, modelyear=2008, range=0.0, fuelCap=9, distance=0.0, kpl=10.0, licence=VBG988]
+
+[make=Scoda, model=Rapid TSI, modelyear=2016, range=0.0, fuelCap=9, distance=0.0, kpl=15.0, licence=VBG989]
+
+
+get object [make=BMW, model=M8, modelyear=2019, range=0.0, fuelCap=9, distance=0.0, kpl=12.0, licence=VBG981]
+removed object[make=Ferrari, model=Roma, modelyear=2020, range=0.0, fuelCap=9, distance=0.0, kpl=15.0, licence=VBG982]
+Mar 06, 2021 8:19:10 PM edu.neu.csye6200.agency.VehicleRegistry removeList
+INFO: called removeList() method
+based on licence plate::[make=Toyota, model=Innova, modelyear=2012, range=0.0, fuelCap=9, distance=0.0, kpl=12.0, licence=VBG984]
+
+Brand 		Model 		ModelYear 	Range 	licence height 	width 	length 	 area
+-------		-------		---------	------	------	-------	------	------	------
+Volvo		S80		 2008		90.0	VBG984	10	20	40	8000
+BMW		M8		 2019		108.0	VBG985	10	20	40	8000
+Ferrari		Roma		 2020		135.0	VBG986	10	20	40	8000
+Mar 06, 2021 8:19:10 PM edu.neu.csye6200.agency.RentalAgencyIO save
+INFO: called first save() method
+Mar 06, 2021 8:19:10 PM edu.neu.csye6200.agency.RentalAgencyIO save
+INFO: called second save() method
+
+data saved to file to file1.txt
+
+Data retrieved from file
+Mar 06, 2021 8:19:10 PM edu.neu.csye6200.agency.RentalAgencyIO load
+INFO: called load() method
+
