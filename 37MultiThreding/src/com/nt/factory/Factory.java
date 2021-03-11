@@ -27,6 +27,6 @@ synchronized void consume(int items) throws InterruptedException {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		notifyAll();
+		notify();
 	}
 }

@@ -9,7 +9,7 @@ public class BankAccount {
 		this.balance = this.balance + amt;
 		System.out.println(amt + " Deposted successfully from thread " + Thread.currentThread().getName());
 		try {
-			wait(100);
+			wait(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -21,7 +21,7 @@ public class BankAccount {
 		this.balance = this.balance - amt;
 		System.out.println(amt + " withdraw successfully from thread " + Thread.currentThread().getName());
 		try {
-			wait(100);
+			wait(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -29,14 +29,11 @@ public class BankAccount {
 	}
 
 	public synchronized void currentBalance() {
-		
-		System.out.println("Your current balance" + this.balance);
 		try {
-			wait(100);
+			Thread.sleep(100);
+			System.out.println("Your current balance" + this.balance);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		notifyAll();
-
 	}
 }
