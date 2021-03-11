@@ -1,4 +1,4 @@
-//same logic for mutiple instances same logic is executed in each thread
+//same logic for mutiple instances of single class is executed in each thread
 class T3 extends Thread{
 	@Override
 	public void run() {
@@ -12,6 +12,8 @@ class T3 extends Thread{
 public class Test05 {
 
 	public static void main(String[] args) {
+
+		long time1=System.currentTimeMillis();
            System.out.println("main start");
            T3 t1=new T3();
            T3 t2=new T3();
@@ -20,6 +22,9 @@ public class Test05 {
            t2.start();
            t3.start();
            System.out.println("main end");
+  		 long time2=System.currentTimeMillis();
+         System.out.println(time2-time1);
+
 	}
 
 }
