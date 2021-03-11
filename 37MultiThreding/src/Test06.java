@@ -1,4 +1,4 @@
-//same logic wit diff state for mmutliple instances each thread by passing diff input to eac thread
+//same logic wit diff state for mutliple instances each thread by passing diff input to each thread
 class T4 extends Thread{
 	private int x;
 	public T4(int x) {
