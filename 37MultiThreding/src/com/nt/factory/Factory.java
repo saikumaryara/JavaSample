@@ -23,7 +23,7 @@ synchronized void consume(int items) throws InterruptedException {
 		this.itemsFactory = false;
 		System.out.println("Items consumed " + items);
 		try {
-			wait();
+			wait(100);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
