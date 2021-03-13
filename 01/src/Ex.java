@@ -25,7 +25,8 @@ public class Ex {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Ex e = new Ex(10, 24);
+		
 
 	}
 
