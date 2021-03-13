@@ -24,23 +24,27 @@ public class Test {
 		}
 	}
 
-	public void run() {
-		root = BGGenerationList.get(4).getBGGRoot();
+	public void start() {
+		
+		root = BGGenerationList.get(4).getBGGenerationRoot();
+		
 		System.out.println("Test class running");
-		print(root);
+		
+		printStems(root);
 	}
 
-	public void print(Stem node) {
+	public void printStems(Stem node) {
+		
 		if (node.getChildStemList().isEmpty()) {
 			
-			System.out.println(node + " tester x");
+			System.out.println(node + " Test x");
 		
 		} else {
 		
-			System.out.println(node + " tester y");
+			System.out.println(node + " Test y");
 			
 			for (Stem s : node.getChildStemList()) {
-				print(s);
+				printStems(s);
 			}
 		}
 	}
@@ -49,7 +53,7 @@ public class Test {
 		
 		Test test = new Test();
 		
-		test.run();
+		test.start();
 	
 	}
 }

@@ -4,25 +4,25 @@ import java.util.ArrayList;
 
 /**
  * @author Deekshitha
- *
  */
 public class Stem {
 	private static int idCount = 0; //ID counter for all stem instances
 	
-	private int id; //Unique ID for each stem instance
-	private double X, Y, length, direction; // X, Y coordinates, length and direction of stem
+	private int id; //Unique ID for each stem instance.
+	private double X, Y, length, direction; // X, Y are the co-ordinates of stem, length and direction of the stem
 	private ArrayList<Stem> childStemList; //list of child Stem instances
 	
-	//Constructor
 	public Stem(double X, double Y, double length, double direction) {
 		id = idCount++;
 		this.X = X;
 		this.Y = Y;
-		this.direction = direction; //direction in radians
-		this.length = length; //length in feet
+		this.direction = direction;     //direction in radians
+		this.length = length;           //length in feet
 		childStemList = new ArrayList<Stem>();
 	}
-	//Adds child stem to the stem instance
+	
+	//Add child stems to the stem instance
+	
 	public void addChild(Stem child) {
 		childStemList.add(child);
 	}
@@ -71,15 +71,18 @@ public class Stem {
 	}
 	
 	public String toString() {
+		
 		return String.format("ID: %5$01d Location: %1$5.2f, %2$5.2f ; Length: %3$5.2f cm ; Direction %4$5.2f radians",X,Y,length,direction,id);
 
 	}
 	
 	public void printChildren() {
+		
 		if(!childStemList.isEmpty()) {
+			
 			for(Stem s : childStemList) {
+				
 				System.out.println(s.toString());
-				s.printChildren();
 			}
 		}
 	}
